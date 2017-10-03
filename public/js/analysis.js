@@ -28,7 +28,7 @@ $(document).ready(function() {
         // make sure we have user input
         if (stock_input) {
             // API Request to yahoo finance for stock info
-            var api_url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%3D%22INPUT%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=quote";
+            var api_url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%3D%22INPUT%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=quote";
             var my_url = api_url.replace("INPUT", stock_input);
 
             // ajax request to yahoo finance using JSONP

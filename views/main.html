@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Audiowide|Roboto' rel='stylesheet'>
+        <link href='/public/css/styles.css' rel='stylesheet' type='text/css'/>
+        <link rel='stylesheet' href='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css'>
+        <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+        <script src='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js'></script>
+        <meta name='viewport' content='width=device-width, initial-scale=1'/>
+        <meta charset='UTF-8'>
+        <title>Sentiment Analysis</title>
+    </head>
+
+    <body>
+        <div class='grid'>
+            <div class='stock_input'>
+                <div class='container'>
+                        <input type='text' class='input' id='input_stock' name='stock_input' placeholder='Enter a Stock Ticker. Ex: AAPL'><button id='submit_stock'>Analyze</button>
+                </div>
+            </div>
+
+            <div class='stock_info'>
+                <div class='content'>
+                    <h1 class='stock_name'>Stock Name</h1>
+                    <h2 class='stock_price'>$Price</h2>
+                    <table class="stock_table" cellpadding="10">
+                        <tr>
+                            <th>Today's Change ($):</th>
+                            <td><span class="stock_change"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Open:</th>
+                            <td><span class="stock_open"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Day's Range:</th>
+                            <td><span class="stock_range"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Market Cap:</th>
+                            <td><span class="stock_cap"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Year Range:</th>
+                            <td><span class="stock_year_range"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Target Price (1-year):</th>
+                            <td><span class="target_price"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class='stock_chart'>
+                <div id='tradingview'>
+                </div>
+            </div>
+
+            <div class='twitter'>
+                <div class='content'>
+                    <h1>TWITTER SENTIMENT</h1>
+                </div>
+                <div class='twitter-chart'>
+                </div>
+                <table class='twitter_scores' cellpadding='10'>
+                    <tr>
+                        <th colspan='2'>Scores</th>
+                    </tr>
+                    <tr>
+                        <th>Positive</th>
+                        <td><span class="twitter_positive"></span></td>
+                        <td><div style="width: 12px; height: 12px; background-color: #59922b;"></div></td>
+                    </tr>
+                    <tr>
+                        <th>Negative</th>
+                        <td><span class="twitter_negative"></span></td>
+                        <td><div style="width: 12px; height: 12px; background-color: #d70206;"></div></td>
+                    </tr>
+                    <tr>
+                        <th>Neutral</th>
+                        <td><span class="twitter_neutral"></span></td>
+                        <td><div style="width: 12px; height: 12px; background-color: #f4c63d;"></div></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class='facebook'>
+                <div class='content'>
+                    <h1>FACEBOOK SENTIMENT</h1>
+                </div>
+            </div>
+
+            <div class='gtrends'>
+                <div class='content'>
+                    <h1>Google Trends</h1><h5>Interest over time (JAN-01-2017 - TODAY)</h5>
+                </div>
+                <div class='gtrends-chart'>
+                </div>
+            </div>
+
+            <div class='analysis'>
+                <div class='content'>
+                    <h1>ANALYSIS</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="/public/js/analysis.js"></script>
+        <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+    </body>
+</html>

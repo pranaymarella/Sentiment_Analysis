@@ -11,7 +11,7 @@ const twitter_consumer_secret = 'DoOKg4EIE5sQ6m9wL6kxyMKvcPzW8rLVZHpLLzuB0EsysNK
 const access_token = '846191975804141569-sLWEfs4JY0wYfFPZU7f2NAKCDIIRm6u';
 const access_secret = 'gyacPUDpDVH8hgjhWc2RNaZ7Z5qyCfOYcceWISkPk4JJw';
 
-var port = process.env.PORT || 8080;
+var port = Number(process.env.PORT || 8080);
 
 // Connect to Twitter
 var client = new Twitter({

@@ -11,7 +11,7 @@ const twitter_consumer_secret = 'DoOKg4EIE5sQ6m9wL6kxyMKvcPzW8rLVZHpLLzuB0EsysNK
 const access_token = '846191975804141569-sLWEfs4JY0wYfFPZU7f2NAKCDIIRm6u';
 const access_secret = 'gyacPUDpDVH8hgjhWc2RNaZ7Z5qyCfOYcceWISkPk4JJw';
 
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 8080;
 
 // Connect to Twitter
 var client = new Twitter({
@@ -71,7 +71,4 @@ app.get('/google/:id([a-zA-Z0-9]*)', function(req, res) {
     });
 });
 
-
-app.listen(port, function() {
-    console.log("App is running on port " + port);
-});
+app.listen(port);
